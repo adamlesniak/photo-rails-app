@@ -9,6 +9,12 @@ Rails.application.configure do
   # and those relying on copy on write to perform better.
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
+  
+  # Send e-mails in production
+  config.action_mailer.delivery_method = :smtp
+
+  # Set default mailer URL for production
+  config.action_mailer.default_url_options = { :host => 'limitless-chamber-23195.herokuapp.com', :protocol => 'https' }
 
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
