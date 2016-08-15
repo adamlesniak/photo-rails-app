@@ -1,9 +1,9 @@
 class Payment < ActiveRecord::Base
   attr_accessor :card_number, :card_cvv, :card_expires_month, :card_expires_year
-  belongs_to user:
+  belongs_to :user
   
   def self.month_options
-    Date::MONTHNAMES.compact.each_wih_index.map { |name, i| ["#{i+1} - #{name}, i+1"]}
+    Date::MONTHNAMES.compact.each_with_index.map { |name, i| ["#{i+1} - #{name}"]}
   end
   
   def self.year_options
