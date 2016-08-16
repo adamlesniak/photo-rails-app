@@ -29,6 +29,14 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Stripe for handling payments
 gem 'stripe'
 
+# Use carrierwave for image upload
+gem 'carrierwave'
+# Use mini_magick for resizing images
+gem 'mini_magick'
+# For images in production
+gem 'fog'
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
