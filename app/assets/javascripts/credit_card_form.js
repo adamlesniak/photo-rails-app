@@ -41,8 +41,8 @@ $(document).ready(function() {
 
   show_error = function(message) {
 
-    if ($("#flash-messages")) {
-      $('div.container.main div:first').prepend("<div id='flash-messages'></div>")
+    if (!$("#flash-messages").length) {
+      $('div.panel .panel-heading').after("<div id='flash-messages'></div>")
     }
 
     $("#flash-messages").html('<div class="alert alert-warning"><a class="close" data-dismiss="alert">×</a><div id="flash_alert">' + message + '</div></div>');
